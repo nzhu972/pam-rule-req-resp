@@ -10,6 +10,8 @@ public class Foo implements java.io.Serializable {
 
 	private java.lang.String firstName;
 
+	private int status;
+
 	public Foo() {
 	}
 
@@ -21,8 +23,17 @@ public class Foo implements java.io.Serializable {
 		this.firstName = firstName;
 	}
 
-	public Foo(java.lang.String firstName) {
+	public int getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(int status) {
+		this.status = status;
+	}
+
+	public Foo(java.lang.String firstName, int status) {
 		this.firstName = firstName;
+		this.status = status;
 	}
 
 }
