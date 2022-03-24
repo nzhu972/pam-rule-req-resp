@@ -6,12 +6,23 @@ package com.delta.demo;
 
 public class Foo implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Foo() {
-    }
+	private java.lang.String firstName;
 
+	public Foo() {
+	}
 
+	public java.lang.String getFirstName() {
+		return this.firstName;
+	}
 
+	public void setFirstName(java.lang.String firstName) {
+		this.firstName = firstName;
+	}
+
+	public Foo(java.lang.String firstName) {
+		this.firstName = firstName;
+	}
 
 }
