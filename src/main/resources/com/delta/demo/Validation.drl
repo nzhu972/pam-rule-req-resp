@@ -1,6 +1,7 @@
 package com.delta.demo;
 
 rule "Validate Request"
+dialect "java"
     when
         $foo : Foo( firstName == "nevin" )
         $responseFoo : ResponseFoo ()
