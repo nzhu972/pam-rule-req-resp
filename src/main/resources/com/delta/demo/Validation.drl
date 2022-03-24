@@ -2,7 +2,7 @@ package com.delta.demo;
 
 rule "Validate Request"
     when
-        $foo : Foo( Name == "nevin" )
+        $foo : Foo( firstName == "nevin" )
         $responseFoo : ResponseFoo ()
     then
         $responseFoo.setStatus(200);
