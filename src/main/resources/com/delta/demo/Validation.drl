@@ -12,3 +12,14 @@ ruleflow-group "validation-grp"
         System.out.println ("-->>Successfully Validated");
         kcontext.getKieRuntime().insert (responseFoo);
 end
+
+rule "Cleaning Up"
+dialect "java"
+ruleflow-group "cleanup-grp"
+    when
+        $foo : Foo( firstName == "nevin" )
+    then
+
+        System.out.println ("-->>Successfully Clean UP");
+
+end
