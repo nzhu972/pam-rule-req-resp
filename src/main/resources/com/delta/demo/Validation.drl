@@ -9,6 +9,7 @@ dialect "java"
         $foo : Foo( firstName == "nevin" )
     then
         ResponseFoo responseFoo = new ResponseFoo ();
+        List myGlobalList = new ArrayList();
         responseFoo.setStatus(100);
         $foo.setStatus(100);
         myGlobalList.add("Hello World");
