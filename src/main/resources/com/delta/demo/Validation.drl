@@ -1,6 +1,6 @@
 package com.delta.demo;
 
-Rule "Validate Request"
+rule "Validate Request"
     when
         $foo : Foo( name == 'nevin' )
         $responseFoo : ResponseFoo ()
