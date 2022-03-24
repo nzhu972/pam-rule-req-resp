@@ -4,8 +4,9 @@ rule "Validate Request"
 dialect "java"
     when
         $foo : Foo( firstName == "nevin" )
-        $responseFoo : ResponseFoo ()
     then
+        ResponseFoo responseFoo = new ResponseFoo ();
+        responseFoo.setStatus(100);
         System.out.println ("-->>Successfully Validated");
-        $responseFoo.setStatus(200);
+        insert (responseFoo);
 end
