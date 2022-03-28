@@ -1,7 +1,5 @@
 package com.delta.demo;
 
-global java.util.List myGlobalList;
-
 rule "Validate Request"
 dialect "java"
 
@@ -11,7 +9,6 @@ dialect "java"
         ResponseFoo responseFoo = new ResponseFoo ();
         responseFoo.setStatus(100);
         $foo.setStatus(100);
-        myGlobalList.add("Hello World");
         System.out.println ("-->>Successfully Validated");
         kcontext.getKieRuntime().insert (responseFoo);
 end
