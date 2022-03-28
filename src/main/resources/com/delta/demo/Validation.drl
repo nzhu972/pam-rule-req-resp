@@ -8,7 +8,7 @@ dialect "java"
     then
         ResponseFoo responseFoo = new ResponseFoo ();
         responseFoo.setStatus(100);
-        $foo.setStatus(100);
+        //$foo.setStatus(100);
         System.out.println ("-->>Successfully Validated");
         kcontext.getKieRuntime().insert (responseFoo);
 end
