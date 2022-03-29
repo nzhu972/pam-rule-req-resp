@@ -5,7 +5,7 @@ dialect "java"
 ruleflow-group "validation"
 
     when
-        foo : Foo()
+        $foo : com.delta.demo.Foo()
         //responseFoo : ResponseFoo ()
     then
         //ResponseFoo responseFoo = new ResponseFoo ();
