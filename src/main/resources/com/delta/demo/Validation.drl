@@ -5,13 +5,13 @@ dialect "mvel"
 ruleflow-group 'validation-grp'
 
     when
-        $foo : Foo( )
-        $responseFoo : ResponseFoo ()
+        foo : Foo( )
+        responseFoo : ResponseFoo ()
     then
         //ResponseFoo responseFoo = new ResponseFoo ();
         //responseFoo.setStatus(100);
-        $responseFoo.setStatus(100);
-        update($responseFoo);
+        responseFoo.setStatus(100);
+        update(responseFoo);
         System.out.println ("-->>Successfully Validated");
         
         //kcontext.setVariable("responseFoo", responseFoo);
