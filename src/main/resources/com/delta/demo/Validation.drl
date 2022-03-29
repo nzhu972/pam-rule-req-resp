@@ -8,21 +8,9 @@ lock-on-active true
         $foo : com.delta.demo.Foo()
         $responseFoo : com.delta.demo.ResponseFoo ()
     then
-        //ResponseFoo responseFoo = new ResponseFoo ();
         $responseFoo.setStatus(100);
-        //responseFoo.setStatus(100);
+
         update($responseFoo);
-        System.out.println ("-->>Successfully Validated: " + $foo.getFirstName());
-        System.out.println ("-->>Successfully Validated: " + $responseFoo.getStatus());
-        //kcontext.setVariable("responseFoo", responseFoo);
+        System.out.println ("-->>Successfully Validated: " + $foo.getFirstName() + " | " + $responseFoo.getStatus());
 
-end
-
-rule "using a static function"
-ruleflow-group "validation-grp"
-lock-on-active true
-when 
-    eval( true )
-then
-    System.out.println("Nevin-->>>");
 end
