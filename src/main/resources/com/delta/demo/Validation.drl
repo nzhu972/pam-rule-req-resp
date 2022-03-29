@@ -5,7 +5,7 @@ dialect "mvel"
 ruleflow-group 'validation-grp'
 
     when
-        $foo : Foo( firstName == "nevin" )
+        $foo : Foo( )
         $responseFoo : ResponseFoo ()
     then
         //ResponseFoo responseFoo = new ResponseFoo ();
