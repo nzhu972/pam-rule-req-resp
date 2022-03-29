@@ -2,7 +2,7 @@ package com.delta.demo;
 
 rule "Validate Request"
 dialect "mvel"
-ruleflow-group 'validation-grp'
+ruleflow-group "validation-grp"
 
     when
         foo : Foo( )
