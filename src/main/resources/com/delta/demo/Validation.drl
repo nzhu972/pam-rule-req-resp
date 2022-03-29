@@ -1,8 +1,7 @@
 package com.delta.demo;
 
 rule "Validate Request"
-dialect "java"
-ruleflow-group "validation"
+ruleflow-group "validation-grp"
 
     when
         $foo : com.delta.demo.Foo()
