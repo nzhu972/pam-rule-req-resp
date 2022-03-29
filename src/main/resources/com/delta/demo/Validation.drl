@@ -6,12 +6,12 @@ ruleflow-group "validation"
 
     when
         foo : Foo()
-        _responseFoo : ResponseFoo ()
+        responseFoo : ResponseFoo ()
     then
         //ResponseFoo responseFoo = new ResponseFoo ();
         //responseFoo.setStatus(100);
-        _responseFoo.setStatus(100);
-        update(_responseFoo);
+        responseFoo.setStatus(100);
+        update(responseFoo);
         System.out.println ("-->>Successfully Validated");
         
         //kcontext.setVariable("responseFoo", responseFoo);
