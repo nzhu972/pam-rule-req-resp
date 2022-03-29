@@ -2,6 +2,7 @@ package com.delta.demo;
 
 rule "Validate Request"
 dialect "java"
+ruleflow-group: validation-grp
 
     when
         $foo : Foo( firstName == "nevin" )
