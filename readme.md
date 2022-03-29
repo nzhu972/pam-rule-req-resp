@@ -15,6 +15,14 @@ Target Technology
 
 JSON Request
 -----------------------
+
+Two object is inserted:
+
+1. Hashmap containing one entry which is "channel" : "bar" which is used in the script node for inserting response object
+2. Foo object which is used in the DRL for rules
+
+A separate object is returned and stored in the Hashmap called 'ResponseData' with value of 100
+
 	{
 	    "lookup": "default-stateless-ksession",
 	    "commands": [
@@ -49,7 +57,7 @@ JSON Request
 	                    {
 	                        "key": "channel",
 	                        "value": {
-	                            "channelName": "PNR"
+	                            "channelName": "bar"
 	                        }
 	                    }
 	                ],
