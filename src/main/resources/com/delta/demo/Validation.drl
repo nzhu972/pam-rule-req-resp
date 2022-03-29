@@ -6,14 +6,14 @@ lock-on-active true
 
     when
         $foo : com.delta.demo.Foo()
-        //$responseFoo : com.delta.demo.ResponseFoo ()
+        $responseFoo : com.delta.demo.ResponseFoo ()
     then
         //ResponseFoo responseFoo = new ResponseFoo ();
-        //$responseFoo.setStatus(100);
+        $responseFoo.setStatus(100);
         //responseFoo.setStatus(100);
-        //update($responseFoo);
+        update($responseFoo);
         System.out.println ("-->>Successfully Validated: " + $foo.getFirstName());
-       //  System.out.println ("-->>Successfully Validated: " + $responseFoo.getStatus());
+        System.out.println ("-->>Successfully Validated: " + $responseFoo.getStatus());
         //kcontext.setVariable("responseFoo", responseFoo);
 
 end
