@@ -1,17 +1,19 @@
 package com.delta.demo;
 
 rule "Validate Request"
-dialect "java"
+dialect "mvel"
 ruleflow-group 'validation-grp'
 
     when
         $foo : Foo( firstName == "nevin" )
+        $responseFoo : ResponseFoo ()
     then
-        ResponseFoo responseFoo = new ResponseFoo ();
-        responseFoo.setStatus(100);
-        $response.setStatus(100);
+        //ResponseFoo responseFoo = new ResponseFoo ();
+        //responseFoo.setStatus(100);
+        $responseFoo.setStatus(100);
+        update($responseFoo);
         System.out.println ("-->>Successfully Validated");
         
-        kcontext.setVariable("responseFoo", responseFoo);
+        //kcontext.setVariable("responseFoo", responseFoo);
 
 end
