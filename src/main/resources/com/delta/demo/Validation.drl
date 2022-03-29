@@ -2,11 +2,11 @@ package com.delta.demo;
 
 rule "Validate Request"
 ruleflow-group "validation-grp"
-
+lock-on-active true
 
     when
         $foo : com.delta.demo.Foo()
-        $responseFoo : ResponseFoo ()
+        $responseFoo : com.delta.demo.ResponseFoo ()
     then
         //ResponseFoo responseFoo = new ResponseFoo ();
         $responseFoo.setStatus(100);
