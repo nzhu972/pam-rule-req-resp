@@ -12,8 +12,8 @@ lock-on-active true
         $responseFoo.setStatus(100);
         //responseFoo.setStatus(100);
         update($responseFoo);
-        System.out.println ("-->>Successfully Validated");
-        
+        System.out.println ("-->>Successfully Validated: " + $foo.getFirstName());
+         System.out.println ("-->>Successfully Validated: " + $responseFoo.getStatus());
         //kcontext.setVariable("responseFoo", responseFoo);
 
 end
