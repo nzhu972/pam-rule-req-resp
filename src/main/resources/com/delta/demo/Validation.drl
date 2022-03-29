@@ -2,7 +2,6 @@ package com.delta.demo;
 
 rule "Validate Request"
 ruleflow-group "validation-grp"
-lock-on-active true
 
     when
         $foo : com.delta.demo.Foo()
