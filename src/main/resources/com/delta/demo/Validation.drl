@@ -11,6 +11,7 @@ ruleflow-group 'validation-grp'
         responseFoo.setStatus(100);
         $response.setStatus(100);
         System.out.println ("-->>Successfully Validated");
-        kcontext.getKieRuntime().insert (responseFoo);
+        
+        kcontext.setVariable("responseFoo", responseFoo);
 
 end
