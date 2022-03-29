@@ -6,12 +6,11 @@ ruleflow-group 'validation-grp'
 
     when
         $foo : Foo( firstName == "nevin" )
-        $response : ResponseFoo ()
     then
-        //ResponseFoo responseFoo = new ResponseFoo ();
-        //responseFoo.setStatus(100);
+        ResponseFoo responseFoo = new ResponseFoo ();
+        responseFoo.setStatus(100);
         $response.setStatus(100);
         System.out.println ("-->>Successfully Validated");
-        //kcontext.getKieRuntime().insert (responseFoo);
+        kcontext.getKieRuntime().insert (responseFoo);
 
 end
